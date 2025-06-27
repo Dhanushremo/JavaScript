@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            background-color: rgb(226, 215, 215);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input, button {
+            max-width: 100px;
+            background-color: rgb(245, 155, 36);
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        #r {
+            font-size: 20px;
+            color: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="f" placeholder="°C">
+    <button onclick="convert()">Convert</button>
+    <p id="r"></p>
+    <script>
+        function convert() {
+            const c = parseFloat(document.getElementById('f').value);
+            if (isNaN(c)) {
+                document.getElementById('r').textContent = "Please enter a valid number.";
+                return;
+            }
+            const f = (c * 9/5 + 32).toFixed(2);
+            document.getElementById('r').textContent = `${f} °F`;
+        }
+    </script>
+</body>
+</html>
