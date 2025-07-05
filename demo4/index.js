@@ -29,3 +29,16 @@ app.post('/add',(req,res)=>{
     }
     
 })
+
+app.get('/cal' ,(req,res)=>{
+    const {a,b,op}=req.body;
+    let result;
+    switch(op){
+    case 'add': result = +a + +b; break;
+    case 'sub': result = a - b; break;
+    case 'mul': result = a * b; break;
+    case 'div': result = b != 0 ? a / b : 'NaN'; break;
+    default: result = 'Invalid op';
+    }
+    res.json({result});
+})

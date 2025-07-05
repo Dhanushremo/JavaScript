@@ -1,0 +1,66 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;              /* Allow items to wrap on smaller screens */
+  justify-content: center;      /* Center items horizontally */
+  gap: 20px;                    /* Space between cards */
+  padding: 20px;
+  background-color: #f1f3f6;    /* Flipkart-like background */
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);  /* Hover lift effect */
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Individual button colors */
+.card button:nth-child(5) {
+  background-color: #e53935; /* Delete - Red */
+}
+
+.card button:nth-child(6) {
+  background-color: #fbc02d; /* Update - Yellow */
+  color: #000;
+}
+
+.card button:nth-child(7) {
+  background-color: #171b17; /* Order - Green */
+}
+
+/* Hover effects */
+.card button:hover {
+  opacity: 0.9;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
